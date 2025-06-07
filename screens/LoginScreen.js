@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import styles from '../styles/LoginScreenStyles';
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState('');
@@ -25,9 +26,3 @@ export default function LoginScreen({ navigation }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { padding: 20 },
-  input: { borderWidth: 1, padding: 10, marginVertical: 10 },
-  erro: { color: 'red' },
-});

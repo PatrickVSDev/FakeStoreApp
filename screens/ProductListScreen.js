@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
-import { FlatList, Image, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { api } from '../services/api';
+import { FlatList, Image, Text, TouchableOpacity, View } from 'react-native';
 import styles from '../styles/ProductListStyles';
-
+import { useEffect, useState } from 'react';
+import { api } from '../services/api';
 
 export default function ProductListScreen({ navigation }) {
   const [produtos, setProdutos] = useState([]);
@@ -15,6 +14,7 @@ export default function ProductListScreen({ navigation }) {
 
   return (
     <FlatList
+      style={styles.container}
       data={produtos}
       keyExtractor={item => item.id.toString()}
       renderItem={({ item }) => (
@@ -23,8 +23,10 @@ export default function ProductListScreen({ navigation }) {
           onPress={() => navigation.navigate('Details', { produto: item })}
         >
           <Image source={{ uri: item.image }} style={styles.imagem} />
-          <Text style={styles.titulo}>{item.title}</Text>
-          <Text>R$ {item.price}</Text>
+          <View style={styles.textoContainer}>
+            <Text style={styles.titulo}>{item.title}</Text>
+            <Text style={styles.preco}>R$ {item.price.toFixed(2)}</Text>
+          </View>
         </TouchableOpacity>
       )}
     />
