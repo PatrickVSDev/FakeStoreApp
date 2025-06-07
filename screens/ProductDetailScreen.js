@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Button, Image, StyleSheet, Text, View } from 'react-native';
 import { isFavorite, toggleFavorite } from '../storage/favorites';
+import styles from '../styles/ProductDetailStyles';
 
 export default function ProductDetailScreen({ route }) {
   const { produto } = route.params;
@@ -28,10 +29,3 @@ export default function ProductDetailScreen({ route }) {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: { padding: 20 },
-  imagem: { width: 150, height: 150, alignSelf: 'center' },
-  titulo: { fontSize: 20, fontWeight: 'bold', marginVertical: 10 },
-  preco: { marginTop: 10, fontSize: 16 },
-});
