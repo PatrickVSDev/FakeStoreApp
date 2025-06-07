@@ -1,11 +1,11 @@
 
-# 🛍️ Fake Store App - React Native
+# Fake Store App - React Native
 
 Aplicativo de loja virtual criado com **React Native + Expo**, que consome a [Fake Store API](https://fakestoreapi.com/) para listar produtos, exibir detalhes e permitir favoritar itens localmente com `AsyncStorage`.
 
 ---
 
-## ✅ Funcionalidades
+## Funcionalidades
 
 - Tela de **login estática** (email/senha fixos)
 - Lista de produtos consumida da **Fake Store API**
@@ -15,7 +15,7 @@ Aplicativo de loja virtual criado com **React Native + Expo**, que consome a [Fa
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 /FakeStoreApp
@@ -29,20 +29,20 @@ Aplicativo de loja virtual criado com **React Native + Expo**, que consome a [Fa
 │   └── api.js
 ├── /storage
 │   └── favorites.js
-├── /styles (opcional)
-│   └── *.js
+├── /styles
+│   └── ProductListStyles.js
 ├── package.json
 └── README.md
 ```
 
 ---
 
-## 🚀 Como rodar o projeto
+## Como rodar o projeto
 
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/FakeStoreApp.git
+git clone https://github.com/PatrickVSDev/FakeStoreApp.git
 cd FakeStoreApp
 ```
 
@@ -60,9 +60,9 @@ npm install -g expo-cli
 
 ---
 
-## ▶️ Rodar o projeto
+## Rodar o projeto
 
-### 🔁 Em qualquer plataforma
+### Em qualquer plataforma
 
 ```bash
 npx expo start
@@ -83,36 +83,21 @@ npx expo start --web
 
 ---
 
-## ✅ Credenciais para Login
+## Credenciais para Login
 
 - **Email:** `admin@admin`
 - **Senha:** `123456`
 
 ---
 
-## 📦 API utilizada
+## API utilizada
 
 - URL base: [https://fakestoreapi.com/products](https://fakestoreapi.com/products)
 
 ---
 
-## 💾 Armazenamento local
+## Armazenamento local
 
 - Favoritos são salvos via **AsyncStorage** e persistem entre sessões do app.
 
 ---
-
-## 🧪 Testado em
-
-- ✅ Expo Go (Android)
-- ✅ Navegador (Web)
-- ✅ Emulador Android Studio
-
----
-
-## 📸 Prints (opcional)
-
-Adicione capturas de tela aqui, como:
-- Tela de Login
-- Lista de Produtos
-- Tela de Detalhes com botão de favorito
